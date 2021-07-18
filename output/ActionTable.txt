@@ -1,0 +1,849 @@
+0	int	r	{'left': 'N', 'right': ['$']}
+0	void	r	{'left': 'N', 'right': ['$']}
+1	#	acc	{}
+2	int	s	{'shift_state': 5}
+2	void	s	{'shift_state': 6}
+3	#	r	{'left': 'P', 'right': ['N', 'declare_list']}
+4	int	s	{'shift_state': 5}
+4	void	s	{'shift_state': 6}
+4	#	r	{'left': 'declare_list', 'right': ['declare']}
+5	ID	s	{'shift_state': 8}
+6	ID	s	{'shift_state': 9}
+7	#	r	{'left': 'declare_list', 'right': ['declare', 'declare_list']}
+8	;	s	{'shift_state': 12}
+8	(	r	{'left': 'M', 'right': ['$']}
+9	(	r	{'left': 'M', 'right': ['$']}
+10	int	r	{'left': 'declare', 'right': ['int', 'ID', 'var_declare']}
+10	void	r	{'left': 'declare', 'right': ['int', 'ID', 'var_declare']}
+10	#	r	{'left': 'declare', 'right': ['int', 'ID', 'var_declare']}
+11	(	r	{'left': 'A', 'right': ['$']}
+12	int	r	{'left': 'var_declare', 'right': [';']}
+12	void	r	{'left': 'var_declare', 'right': [';']}
+12	#	r	{'left': 'var_declare', 'right': [';']}
+13	(	r	{'left': 'A', 'right': ['$']}
+14	(	s	{'shift_state': 17}
+15	(	s	{'shift_state': 17}
+16	int	r	{'left': 'declare', 'right': ['int', 'ID', 'M', 'A', 'function_declare']}
+16	void	r	{'left': 'declare', 'right': ['int', 'ID', 'M', 'A', 'function_declare']}
+16	#	r	{'left': 'declare', 'right': ['int', 'ID', 'M', 'A', 'function_declare']}
+17	int	s	{'shift_state': 22}
+17	void	s	{'shift_state': 23}
+17	)	r	{'left': 'parameter', 'right': ['$']}
+18	int	r	{'left': 'declare', 'right': ['void', 'ID', 'M', 'A', 'function_declare']}
+18	void	r	{'left': 'declare', 'right': ['void', 'ID', 'M', 'A', 'function_declare']}
+18	#	r	{'left': 'declare', 'right': ['void', 'ID', 'M', 'A', 'function_declare']}
+19	)	s	{'shift_state': 24}
+20	)	r	{'left': 'parameter', 'right': ['parameter_list']}
+21	)	r	{'left': 'parameter_list', 'right': ['param']}
+21	,	s	{'shift_state': 25}
+22	ID	s	{'shift_state': 26}
+23	)	r	{'left': 'parameter', 'right': ['void']}
+24	{	s	{'shift_state': 28}
+25	int	s	{'shift_state': 22}
+26	)	r	{'left': 'param', 'right': ['int', 'ID']}
+26	,	r	{'left': 'param', 'right': ['int', 'ID']}
+27	int	r	{'left': 'function_declare', 'right': ['(', 'parameter', ')', 'sentence_block']}
+27	void	r	{'left': 'function_declare', 'right': ['(', 'parameter', ')', 'sentence_block']}
+27	#	r	{'left': 'function_declare', 'right': ['(', 'parameter', ')', 'sentence_block']}
+28	int	s	{'shift_state': 32}
+28	ID	r	{'left': 'inner_declare', 'right': ['$']}
+28	return	r	{'left': 'inner_declare', 'right': ['$']}
+28	while	r	{'left': 'inner_declare', 'right': ['$']}
+28	if	r	{'left': 'inner_declare', 'right': ['$']}
+29	)	r	{'left': 'parameter_list', 'right': ['param', ',', 'parameter_list']}
+30	ID	s	{'shift_state': 39}
+30	return	s	{'shift_state': 40}
+30	while	s	{'shift_state': 41}
+30	if	s	{'shift_state': 42}
+31	;	s	{'shift_state': 43}
+32	ID	s	{'shift_state': 44}
+33	}	s	{'shift_state': 45}
+34	ID	r	{'left': 'M', 'right': ['$']}
+34	}	r	{'left': 'sentence_list', 'right': ['sentence']}
+34	return	r	{'left': 'M', 'right': ['$']}
+34	while	r	{'left': 'M', 'right': ['$']}
+34	if	r	{'left': 'M', 'right': ['$']}
+35	ID	r	{'left': 'sentence', 'right': ['assign_sentence']}
+35	}	r	{'left': 'sentence', 'right': ['assign_sentence']}
+35	return	r	{'left': 'sentence', 'right': ['assign_sentence']}
+35	while	r	{'left': 'sentence', 'right': ['assign_sentence']}
+35	if	r	{'left': 'sentence', 'right': ['assign_sentence']}
+36	ID	r	{'left': 'sentence', 'right': ['return_sentence']}
+36	}	r	{'left': 'sentence', 'right': ['return_sentence']}
+36	return	r	{'left': 'sentence', 'right': ['return_sentence']}
+36	while	r	{'left': 'sentence', 'right': ['return_sentence']}
+36	if	r	{'left': 'sentence', 'right': ['return_sentence']}
+37	ID	r	{'left': 'sentence', 'right': ['while_sentence']}
+37	}	r	{'left': 'sentence', 'right': ['while_sentence']}
+37	return	r	{'left': 'sentence', 'right': ['while_sentence']}
+37	while	r	{'left': 'sentence', 'right': ['while_sentence']}
+37	if	r	{'left': 'sentence', 'right': ['while_sentence']}
+38	ID	r	{'left': 'sentence', 'right': ['if_sentence']}
+38	}	r	{'left': 'sentence', 'right': ['if_sentence']}
+38	return	r	{'left': 'sentence', 'right': ['if_sentence']}
+38	while	r	{'left': 'sentence', 'right': ['if_sentence']}
+38	if	r	{'left': 'sentence', 'right': ['if_sentence']}
+39	=	s	{'shift_state': 47}
+40	ID	s	{'shift_state': 52}
+40	;	s	{'shift_state': 53}
+40	(	s	{'shift_state': 54}
+40	NUM	s	{'shift_state': 55}
+41	(	r	{'left': 'M', 'right': ['$']}
+42	(	s	{'shift_state': 57}
+43	int	s	{'shift_state': 32}
+43	ID	r	{'left': 'inner_declare', 'right': ['$']}
+43	return	r	{'left': 'inner_declare', 'right': ['$']}
+43	while	r	{'left': 'inner_declare', 'right': ['$']}
+43	if	r	{'left': 'inner_declare', 'right': ['$']}
+44	;	r	{'left': 'inner_var_declare', 'right': ['int', 'ID']}
+45	int	r	{'left': 'sentence_block', 'right': ['{', 'inner_declare', 'sentence_list', '}']}
+45	void	r	{'left': 'sentence_block', 'right': ['{', 'inner_declare', 'sentence_list', '}']}
+45	#	r	{'left': 'sentence_block', 'right': ['{', 'inner_declare', 'sentence_list', '}']}
+46	ID	s	{'shift_state': 39}
+46	return	s	{'shift_state': 40}
+46	while	s	{'shift_state': 41}
+46	if	s	{'shift_state': 42}
+47	ID	s	{'shift_state': 52}
+47	(	s	{'shift_state': 54}
+47	NUM	s	{'shift_state': 55}
+48	;	s	{'shift_state': 61}
+49	;	r	{'left': 'expression', 'right': ['add_expression']}
+49	>	s	{'shift_state': 62}
+49	<	s	{'shift_state': 63}
+49	==	s	{'shift_state': 64}
+49	>=	s	{'shift_state': 65}
+49	<=	s	{'shift_state': 66}
+49	!=	s	{'shift_state': 67}
+50	;	r	{'left': 'add_expression', 'right': ['item']}
+50	>	r	{'left': 'add_expression', 'right': ['item']}
+50	<	r	{'left': 'add_expression', 'right': ['item']}
+50	==	r	{'left': 'add_expression', 'right': ['item']}
+50	>=	r	{'left': 'add_expression', 'right': ['item']}
+50	<=	r	{'left': 'add_expression', 'right': ['item']}
+50	!=	r	{'left': 'add_expression', 'right': ['item']}
+50	+	s	{'shift_state': 68}
+50	-	s	{'shift_state': 69}
+51	;	r	{'left': 'item', 'right': ['factor']}
+51	>	r	{'left': 'item', 'right': ['factor']}
+51	<	r	{'left': 'item', 'right': ['factor']}
+51	==	r	{'left': 'item', 'right': ['factor']}
+51	>=	r	{'left': 'item', 'right': ['factor']}
+51	<=	r	{'left': 'item', 'right': ['factor']}
+51	!=	r	{'left': 'item', 'right': ['factor']}
+51	+	r	{'left': 'item', 'right': ['factor']}
+51	-	r	{'left': 'item', 'right': ['factor']}
+51	*	s	{'shift_state': 70}
+51	/	s	{'shift_state': 71}
+52	;	r	{'left': 'factor', 'right': ['ID']}
+52	(	s	{'shift_state': 72}
+52	>	r	{'left': 'factor', 'right': ['ID']}
+52	<	r	{'left': 'factor', 'right': ['ID']}
+52	==	r	{'left': 'factor', 'right': ['ID']}
+52	>=	r	{'left': 'factor', 'right': ['ID']}
+52	<=	r	{'left': 'factor', 'right': ['ID']}
+52	!=	r	{'left': 'factor', 'right': ['ID']}
+52	+	r	{'left': 'factor', 'right': ['ID']}
+52	-	r	{'left': 'factor', 'right': ['ID']}
+52	*	r	{'left': 'factor', 'right': ['ID']}
+52	/	r	{'left': 'factor', 'right': ['ID']}
+53	ID	r	{'left': 'return_sentence', 'right': ['return', ';']}
+53	}	r	{'left': 'return_sentence', 'right': ['return', ';']}
+53	return	r	{'left': 'return_sentence', 'right': ['return', ';']}
+53	while	r	{'left': 'return_sentence', 'right': ['return', ';']}
+53	if	r	{'left': 'return_sentence', 'right': ['return', ';']}
+54	ID	s	{'shift_state': 77}
+54	(	s	{'shift_state': 78}
+54	NUM	s	{'shift_state': 79}
+55	;	r	{'left': 'factor', 'right': ['NUM']}
+55	>	r	{'left': 'factor', 'right': ['NUM']}
+55	<	r	{'left': 'factor', 'right': ['NUM']}
+55	==	r	{'left': 'factor', 'right': ['NUM']}
+55	>=	r	{'left': 'factor', 'right': ['NUM']}
+55	<=	r	{'left': 'factor', 'right': ['NUM']}
+55	!=	r	{'left': 'factor', 'right': ['NUM']}
+55	+	r	{'left': 'factor', 'right': ['NUM']}
+55	-	r	{'left': 'factor', 'right': ['NUM']}
+55	*	r	{'left': 'factor', 'right': ['NUM']}
+55	/	r	{'left': 'factor', 'right': ['NUM']}
+56	(	s	{'shift_state': 80}
+57	ID	s	{'shift_state': 77}
+57	(	s	{'shift_state': 78}
+57	NUM	s	{'shift_state': 79}
+58	ID	r	{'left': 'inner_declare', 'right': ['inner_var_declare', ';', 'inner_declare']}
+58	return	r	{'left': 'inner_declare', 'right': ['inner_var_declare', ';', 'inner_declare']}
+58	while	r	{'left': 'inner_declare', 'right': ['inner_var_declare', ';', 'inner_declare']}
+58	if	r	{'left': 'inner_declare', 'right': ['inner_var_declare', ';', 'inner_declare']}
+59	}	r	{'left': 'sentence_list', 'right': ['sentence', 'M', 'sentence_list']}
+60	;	s	{'shift_state': 82}
+61	ID	r	{'left': 'return_sentence', 'right': ['return', 'expression', ';']}
+61	}	r	{'left': 'return_sentence', 'right': ['return', 'expression', ';']}
+61	return	r	{'left': 'return_sentence', 'right': ['return', 'expression', ';']}
+61	while	r	{'left': 'return_sentence', 'right': ['return', 'expression', ';']}
+61	if	r	{'left': 'return_sentence', 'right': ['return', 'expression', ';']}
+62	ID	s	{'shift_state': 86}
+62	(	s	{'shift_state': 87}
+62	NUM	s	{'shift_state': 88}
+63	ID	s	{'shift_state': 86}
+63	(	s	{'shift_state': 87}
+63	NUM	s	{'shift_state': 88}
+64	ID	s	{'shift_state': 86}
+64	(	s	{'shift_state': 87}
+64	NUM	s	{'shift_state': 88}
+65	ID	s	{'shift_state': 86}
+65	(	s	{'shift_state': 87}
+65	NUM	s	{'shift_state': 88}
+66	ID	s	{'shift_state': 86}
+66	(	s	{'shift_state': 87}
+66	NUM	s	{'shift_state': 88}
+67	ID	s	{'shift_state': 86}
+67	(	s	{'shift_state': 87}
+67	NUM	s	{'shift_state': 88}
+68	ID	s	{'shift_state': 52}
+68	(	s	{'shift_state': 54}
+68	NUM	s	{'shift_state': 55}
+69	ID	s	{'shift_state': 52}
+69	(	s	{'shift_state': 54}
+69	NUM	s	{'shift_state': 55}
+70	ID	s	{'shift_state': 52}
+70	(	s	{'shift_state': 54}
+70	NUM	s	{'shift_state': 55}
+71	ID	s	{'shift_state': 52}
+71	(	s	{'shift_state': 54}
+71	NUM	s	{'shift_state': 55}
+72	ID	s	{'shift_state': 103}
+72	(	s	{'shift_state': 104}
+72	)	r	{'left': 'argument_list', 'right': ['$']}
+72	NUM	s	{'shift_state': 105}
+73	)	s	{'shift_state': 106}
+74	)	r	{'left': 'expression', 'right': ['add_expression']}
+74	>	s	{'shift_state': 107}
+74	<	s	{'shift_state': 108}
+74	==	s	{'shift_state': 109}
+74	>=	s	{'shift_state': 110}
+74	<=	s	{'shift_state': 111}
+74	!=	s	{'shift_state': 112}
+75	)	r	{'left': 'add_expression', 'right': ['item']}
+75	>	r	{'left': 'add_expression', 'right': ['item']}
+75	<	r	{'left': 'add_expression', 'right': ['item']}
+75	==	r	{'left': 'add_expression', 'right': ['item']}
+75	>=	r	{'left': 'add_expression', 'right': ['item']}
+75	<=	r	{'left': 'add_expression', 'right': ['item']}
+75	!=	r	{'left': 'add_expression', 'right': ['item']}
+75	+	s	{'shift_state': 113}
+75	-	s	{'shift_state': 114}
+76	)	r	{'left': 'item', 'right': ['factor']}
+76	>	r	{'left': 'item', 'right': ['factor']}
+76	<	r	{'left': 'item', 'right': ['factor']}
+76	==	r	{'left': 'item', 'right': ['factor']}
+76	>=	r	{'left': 'item', 'right': ['factor']}
+76	<=	r	{'left': 'item', 'right': ['factor']}
+76	!=	r	{'left': 'item', 'right': ['factor']}
+76	+	r	{'left': 'item', 'right': ['factor']}
+76	-	r	{'left': 'item', 'right': ['factor']}
+76	*	s	{'shift_state': 115}
+76	/	s	{'shift_state': 116}
+77	(	s	{'shift_state': 117}
+77	)	r	{'left': 'factor', 'right': ['ID']}
+77	>	r	{'left': 'factor', 'right': ['ID']}
+77	<	r	{'left': 'factor', 'right': ['ID']}
+77	==	r	{'left': 'factor', 'right': ['ID']}
+77	>=	r	{'left': 'factor', 'right': ['ID']}
+77	<=	r	{'left': 'factor', 'right': ['ID']}
+77	!=	r	{'left': 'factor', 'right': ['ID']}
+77	+	r	{'left': 'factor', 'right': ['ID']}
+77	-	r	{'left': 'factor', 'right': ['ID']}
+77	*	r	{'left': 'factor', 'right': ['ID']}
+77	/	r	{'left': 'factor', 'right': ['ID']}
+78	ID	s	{'shift_state': 77}
+78	(	s	{'shift_state': 78}
+78	NUM	s	{'shift_state': 79}
+79	)	r	{'left': 'factor', 'right': ['NUM']}
+79	>	r	{'left': 'factor', 'right': ['NUM']}
+79	<	r	{'left': 'factor', 'right': ['NUM']}
+79	==	r	{'left': 'factor', 'right': ['NUM']}
+79	>=	r	{'left': 'factor', 'right': ['NUM']}
+79	<=	r	{'left': 'factor', 'right': ['NUM']}
+79	!=	r	{'left': 'factor', 'right': ['NUM']}
+79	+	r	{'left': 'factor', 'right': ['NUM']}
+79	-	r	{'left': 'factor', 'right': ['NUM']}
+79	*	r	{'left': 'factor', 'right': ['NUM']}
+79	/	r	{'left': 'factor', 'right': ['NUM']}
+80	ID	s	{'shift_state': 77}
+80	(	s	{'shift_state': 78}
+80	NUM	s	{'shift_state': 79}
+81	)	s	{'shift_state': 120}
+82	ID	r	{'left': 'assign_sentence', 'right': ['ID', '=', 'expression', ';']}
+82	}	r	{'left': 'assign_sentence', 'right': ['ID', '=', 'expression', ';']}
+82	return	r	{'left': 'assign_sentence', 'right': ['ID', '=', 'expression', ';']}
+82	while	r	{'left': 'assign_sentence', 'right': ['ID', '=', 'expression', ';']}
+82	if	r	{'left': 'assign_sentence', 'right': ['ID', '=', 'expression', ';']}
+83	;	r	{'left': 'expression', 'right': ['add_expression', '>', 'add_expression']}
+84	;	r	{'left': 'add_expression', 'right': ['item']}
+84	+	s	{'shift_state': 121}
+84	-	s	{'shift_state': 122}
+85	;	r	{'left': 'item', 'right': ['factor']}
+85	+	r	{'left': 'item', 'right': ['factor']}
+85	-	r	{'left': 'item', 'right': ['factor']}
+85	*	s	{'shift_state': 123}
+85	/	s	{'shift_state': 124}
+86	;	r	{'left': 'factor', 'right': ['ID']}
+86	(	s	{'shift_state': 125}
+86	+	r	{'left': 'factor', 'right': ['ID']}
+86	-	r	{'left': 'factor', 'right': ['ID']}
+86	*	r	{'left': 'factor', 'right': ['ID']}
+86	/	r	{'left': 'factor', 'right': ['ID']}
+87	ID	s	{'shift_state': 77}
+87	(	s	{'shift_state': 78}
+87	NUM	s	{'shift_state': 79}
+88	;	r	{'left': 'factor', 'right': ['NUM']}
+88	+	r	{'left': 'factor', 'right': ['NUM']}
+88	-	r	{'left': 'factor', 'right': ['NUM']}
+88	*	r	{'left': 'factor', 'right': ['NUM']}
+88	/	r	{'left': 'factor', 'right': ['NUM']}
+89	;	r	{'left': 'expression', 'right': ['add_expression', '<', 'add_expression']}
+90	;	r	{'left': 'expression', 'right': ['add_expression', '==', 'add_expression']}
+91	;	r	{'left': 'expression', 'right': ['add_expression', '>=', 'add_expression']}
+92	;	r	{'left': 'expression', 'right': ['add_expression', '<=', 'add_expression']}
+93	;	r	{'left': 'expression', 'right': ['add_expression', '!=', 'add_expression']}
+94	;	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+94	>	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+94	<	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+94	==	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+94	>=	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+94	<=	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+94	!=	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+95	;	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+95	>	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+95	<	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+95	==	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+95	>=	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+95	<=	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+95	!=	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+96	;	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+96	>	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+96	<	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+96	==	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+96	>=	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+96	<=	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+96	!=	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+96	+	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+96	-	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+97	;	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+97	>	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+97	<	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+97	==	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+97	>=	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+97	<=	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+97	!=	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+97	+	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+97	-	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+98	)	r	{'left': 'argument_list', 'right': ['expression']}
+98	,	s	{'shift_state': 127}
+99	)	r	{'left': 'expression', 'right': ['add_expression']}
+99	,	r	{'left': 'expression', 'right': ['add_expression']}
+99	>	s	{'shift_state': 128}
+99	<	s	{'shift_state': 129}
+99	==	s	{'shift_state': 130}
+99	>=	s	{'shift_state': 131}
+99	<=	s	{'shift_state': 132}
+99	!=	s	{'shift_state': 133}
+100	)	r	{'left': 'add_expression', 'right': ['item']}
+100	,	r	{'left': 'add_expression', 'right': ['item']}
+100	>	r	{'left': 'add_expression', 'right': ['item']}
+100	<	r	{'left': 'add_expression', 'right': ['item']}
+100	==	r	{'left': 'add_expression', 'right': ['item']}
+100	>=	r	{'left': 'add_expression', 'right': ['item']}
+100	<=	r	{'left': 'add_expression', 'right': ['item']}
+100	!=	r	{'left': 'add_expression', 'right': ['item']}
+100	+	s	{'shift_state': 134}
+100	-	s	{'shift_state': 135}
+101	)	r	{'left': 'item', 'right': ['factor']}
+101	,	r	{'left': 'item', 'right': ['factor']}
+101	>	r	{'left': 'item', 'right': ['factor']}
+101	<	r	{'left': 'item', 'right': ['factor']}
+101	==	r	{'left': 'item', 'right': ['factor']}
+101	>=	r	{'left': 'item', 'right': ['factor']}
+101	<=	r	{'left': 'item', 'right': ['factor']}
+101	!=	r	{'left': 'item', 'right': ['factor']}
+101	+	r	{'left': 'item', 'right': ['factor']}
+101	-	r	{'left': 'item', 'right': ['factor']}
+101	*	s	{'shift_state': 136}
+101	/	s	{'shift_state': 137}
+102	)	s	{'shift_state': 138}
+103	(	s	{'shift_state': 139}
+103	)	r	{'left': 'factor', 'right': ['ID']}
+103	,	r	{'left': 'factor', 'right': ['ID']}
+103	>	r	{'left': 'factor', 'right': ['ID']}
+103	<	r	{'left': 'factor', 'right': ['ID']}
+103	==	r	{'left': 'factor', 'right': ['ID']}
+103	>=	r	{'left': 'factor', 'right': ['ID']}
+103	<=	r	{'left': 'factor', 'right': ['ID']}
+103	!=	r	{'left': 'factor', 'right': ['ID']}
+103	+	r	{'left': 'factor', 'right': ['ID']}
+103	-	r	{'left': 'factor', 'right': ['ID']}
+103	*	r	{'left': 'factor', 'right': ['ID']}
+103	/	r	{'left': 'factor', 'right': ['ID']}
+104	ID	s	{'shift_state': 77}
+104	(	s	{'shift_state': 78}
+104	NUM	s	{'shift_state': 79}
+105	)	r	{'left': 'factor', 'right': ['NUM']}
+105	,	r	{'left': 'factor', 'right': ['NUM']}
+105	>	r	{'left': 'factor', 'right': ['NUM']}
+105	<	r	{'left': 'factor', 'right': ['NUM']}
+105	==	r	{'left': 'factor', 'right': ['NUM']}
+105	>=	r	{'left': 'factor', 'right': ['NUM']}
+105	<=	r	{'left': 'factor', 'right': ['NUM']}
+105	!=	r	{'left': 'factor', 'right': ['NUM']}
+105	+	r	{'left': 'factor', 'right': ['NUM']}
+105	-	r	{'left': 'factor', 'right': ['NUM']}
+105	*	r	{'left': 'factor', 'right': ['NUM']}
+105	/	r	{'left': 'factor', 'right': ['NUM']}
+106	;	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+106	>	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+106	<	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+106	==	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+106	>=	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+106	<=	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+106	!=	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+106	+	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+106	-	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+106	*	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+106	/	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+107	ID	s	{'shift_state': 144}
+107	(	s	{'shift_state': 145}
+107	NUM	s	{'shift_state': 146}
+108	ID	s	{'shift_state': 144}
+108	(	s	{'shift_state': 145}
+108	NUM	s	{'shift_state': 146}
+109	ID	s	{'shift_state': 144}
+109	(	s	{'shift_state': 145}
+109	NUM	s	{'shift_state': 146}
+110	ID	s	{'shift_state': 144}
+110	(	s	{'shift_state': 145}
+110	NUM	s	{'shift_state': 146}
+111	ID	s	{'shift_state': 144}
+111	(	s	{'shift_state': 145}
+111	NUM	s	{'shift_state': 146}
+112	ID	s	{'shift_state': 144}
+112	(	s	{'shift_state': 145}
+112	NUM	s	{'shift_state': 146}
+113	ID	s	{'shift_state': 77}
+113	(	s	{'shift_state': 78}
+113	NUM	s	{'shift_state': 79}
+114	ID	s	{'shift_state': 77}
+114	(	s	{'shift_state': 78}
+114	NUM	s	{'shift_state': 79}
+115	ID	s	{'shift_state': 77}
+115	(	s	{'shift_state': 78}
+115	NUM	s	{'shift_state': 79}
+116	ID	s	{'shift_state': 77}
+116	(	s	{'shift_state': 78}
+116	NUM	s	{'shift_state': 79}
+117	ID	s	{'shift_state': 103}
+117	(	s	{'shift_state': 104}
+117	)	r	{'left': 'argument_list', 'right': ['$']}
+117	NUM	s	{'shift_state': 105}
+118	)	s	{'shift_state': 157}
+119	)	s	{'shift_state': 158}
+120	{	r	{'left': 'A', 'right': ['$']}
+121	ID	s	{'shift_state': 86}
+121	(	s	{'shift_state': 87}
+121	NUM	s	{'shift_state': 88}
+122	ID	s	{'shift_state': 86}
+122	(	s	{'shift_state': 87}
+122	NUM	s	{'shift_state': 88}
+123	ID	s	{'shift_state': 86}
+123	(	s	{'shift_state': 87}
+123	NUM	s	{'shift_state': 88}
+124	ID	s	{'shift_state': 86}
+124	(	s	{'shift_state': 87}
+124	NUM	s	{'shift_state': 88}
+125	ID	s	{'shift_state': 103}
+125	(	s	{'shift_state': 104}
+125	)	r	{'left': 'argument_list', 'right': ['$']}
+125	NUM	s	{'shift_state': 105}
+126	)	s	{'shift_state': 165}
+127	ID	s	{'shift_state': 103}
+127	(	s	{'shift_state': 104}
+127	)	r	{'left': 'argument_list', 'right': ['$']}
+127	NUM	s	{'shift_state': 105}
+128	ID	s	{'shift_state': 170}
+128	(	s	{'shift_state': 171}
+128	NUM	s	{'shift_state': 172}
+129	ID	s	{'shift_state': 170}
+129	(	s	{'shift_state': 171}
+129	NUM	s	{'shift_state': 172}
+130	ID	s	{'shift_state': 170}
+130	(	s	{'shift_state': 171}
+130	NUM	s	{'shift_state': 172}
+131	ID	s	{'shift_state': 170}
+131	(	s	{'shift_state': 171}
+131	NUM	s	{'shift_state': 172}
+132	ID	s	{'shift_state': 170}
+132	(	s	{'shift_state': 171}
+132	NUM	s	{'shift_state': 172}
+133	ID	s	{'shift_state': 170}
+133	(	s	{'shift_state': 171}
+133	NUM	s	{'shift_state': 172}
+134	ID	s	{'shift_state': 103}
+134	(	s	{'shift_state': 104}
+134	NUM	s	{'shift_state': 105}
+135	ID	s	{'shift_state': 103}
+135	(	s	{'shift_state': 104}
+135	NUM	s	{'shift_state': 105}
+136	ID	s	{'shift_state': 103}
+136	(	s	{'shift_state': 104}
+136	NUM	s	{'shift_state': 105}
+137	ID	s	{'shift_state': 103}
+137	(	s	{'shift_state': 104}
+137	NUM	s	{'shift_state': 105}
+138	;	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+138	>	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+138	<	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+138	==	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+138	>=	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+138	<=	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+138	!=	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+138	+	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+138	-	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+138	*	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+138	/	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+139	ID	s	{'shift_state': 103}
+139	(	s	{'shift_state': 104}
+139	)	r	{'left': 'argument_list', 'right': ['$']}
+139	NUM	s	{'shift_state': 105}
+140	)	s	{'shift_state': 183}
+141	)	r	{'left': 'expression', 'right': ['add_expression', '>', 'add_expression']}
+142	)	r	{'left': 'add_expression', 'right': ['item']}
+142	+	s	{'shift_state': 184}
+142	-	s	{'shift_state': 185}
+143	)	r	{'left': 'item', 'right': ['factor']}
+143	+	r	{'left': 'item', 'right': ['factor']}
+143	-	r	{'left': 'item', 'right': ['factor']}
+143	*	s	{'shift_state': 186}
+143	/	s	{'shift_state': 187}
+144	(	s	{'shift_state': 188}
+144	)	r	{'left': 'factor', 'right': ['ID']}
+144	+	r	{'left': 'factor', 'right': ['ID']}
+144	-	r	{'left': 'factor', 'right': ['ID']}
+144	*	r	{'left': 'factor', 'right': ['ID']}
+144	/	r	{'left': 'factor', 'right': ['ID']}
+145	ID	s	{'shift_state': 77}
+145	(	s	{'shift_state': 78}
+145	NUM	s	{'shift_state': 79}
+146	)	r	{'left': 'factor', 'right': ['NUM']}
+146	+	r	{'left': 'factor', 'right': ['NUM']}
+146	-	r	{'left': 'factor', 'right': ['NUM']}
+146	*	r	{'left': 'factor', 'right': ['NUM']}
+146	/	r	{'left': 'factor', 'right': ['NUM']}
+147	)	r	{'left': 'expression', 'right': ['add_expression', '<', 'add_expression']}
+148	)	r	{'left': 'expression', 'right': ['add_expression', '==', 'add_expression']}
+149	)	r	{'left': 'expression', 'right': ['add_expression', '>=', 'add_expression']}
+150	)	r	{'left': 'expression', 'right': ['add_expression', '<=', 'add_expression']}
+151	)	r	{'left': 'expression', 'right': ['add_expression', '!=', 'add_expression']}
+152	)	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+152	>	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+152	<	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+152	==	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+152	>=	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+152	<=	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+152	!=	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+153	)	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+153	>	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+153	<	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+153	==	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+153	>=	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+153	<=	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+153	!=	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+154	)	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+154	>	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+154	<	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+154	==	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+154	>=	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+154	<=	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+154	!=	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+154	+	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+154	-	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+155	)	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+155	>	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+155	<	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+155	==	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+155	>=	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+155	<=	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+155	!=	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+155	+	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+155	-	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+156	)	s	{'shift_state': 190}
+157	)	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+157	>	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+157	<	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+157	==	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+157	>=	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+157	<=	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+157	!=	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+157	+	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+157	-	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+157	*	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+157	/	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+158	{	r	{'left': 'A', 'right': ['$']}
+159	{	s	{'shift_state': 193}
+160	;	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+161	;	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+162	;	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+162	+	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+162	-	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+163	;	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+163	+	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+163	-	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+164	)	s	{'shift_state': 194}
+165	;	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+165	+	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+165	-	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+165	*	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+165	/	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+166	)	r	{'left': 'argument_list', 'right': ['expression', ',', 'argument_list']}
+167	)	r	{'left': 'expression', 'right': ['add_expression', '>', 'add_expression']}
+167	,	r	{'left': 'expression', 'right': ['add_expression', '>', 'add_expression']}
+168	)	r	{'left': 'add_expression', 'right': ['item']}
+168	,	r	{'left': 'add_expression', 'right': ['item']}
+168	+	s	{'shift_state': 195}
+168	-	s	{'shift_state': 196}
+169	)	r	{'left': 'item', 'right': ['factor']}
+169	,	r	{'left': 'item', 'right': ['factor']}
+169	+	r	{'left': 'item', 'right': ['factor']}
+169	-	r	{'left': 'item', 'right': ['factor']}
+169	*	s	{'shift_state': 197}
+169	/	s	{'shift_state': 198}
+170	(	s	{'shift_state': 199}
+170	)	r	{'left': 'factor', 'right': ['ID']}
+170	,	r	{'left': 'factor', 'right': ['ID']}
+170	+	r	{'left': 'factor', 'right': ['ID']}
+170	-	r	{'left': 'factor', 'right': ['ID']}
+170	*	r	{'left': 'factor', 'right': ['ID']}
+170	/	r	{'left': 'factor', 'right': ['ID']}
+171	ID	s	{'shift_state': 77}
+171	(	s	{'shift_state': 78}
+171	NUM	s	{'shift_state': 79}
+172	)	r	{'left': 'factor', 'right': ['NUM']}
+172	,	r	{'left': 'factor', 'right': ['NUM']}
+172	+	r	{'left': 'factor', 'right': ['NUM']}
+172	-	r	{'left': 'factor', 'right': ['NUM']}
+172	*	r	{'left': 'factor', 'right': ['NUM']}
+172	/	r	{'left': 'factor', 'right': ['NUM']}
+173	)	r	{'left': 'expression', 'right': ['add_expression', '<', 'add_expression']}
+173	,	r	{'left': 'expression', 'right': ['add_expression', '<', 'add_expression']}
+174	)	r	{'left': 'expression', 'right': ['add_expression', '==', 'add_expression']}
+174	,	r	{'left': 'expression', 'right': ['add_expression', '==', 'add_expression']}
+175	)	r	{'left': 'expression', 'right': ['add_expression', '>=', 'add_expression']}
+175	,	r	{'left': 'expression', 'right': ['add_expression', '>=', 'add_expression']}
+176	)	r	{'left': 'expression', 'right': ['add_expression', '<=', 'add_expression']}
+176	,	r	{'left': 'expression', 'right': ['add_expression', '<=', 'add_expression']}
+177	)	r	{'left': 'expression', 'right': ['add_expression', '!=', 'add_expression']}
+177	,	r	{'left': 'expression', 'right': ['add_expression', '!=', 'add_expression']}
+178	)	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+178	,	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+178	>	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+178	<	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+178	==	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+178	>=	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+178	<=	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+178	!=	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+179	)	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+179	,	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+179	>	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+179	<	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+179	==	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+179	>=	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+179	<=	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+179	!=	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+180	)	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+180	,	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+180	>	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+180	<	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+180	==	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+180	>=	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+180	<=	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+180	!=	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+180	+	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+180	-	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+181	)	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+181	,	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+181	>	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+181	<	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+181	==	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+181	>=	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+181	<=	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+181	!=	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+181	+	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+181	-	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+182	)	s	{'shift_state': 201}
+183	)	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+183	,	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+183	>	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+183	<	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+183	==	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+183	>=	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+183	<=	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+183	!=	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+183	+	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+183	-	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+183	*	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+183	/	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+184	ID	s	{'shift_state': 144}
+184	(	s	{'shift_state': 145}
+184	NUM	s	{'shift_state': 146}
+185	ID	s	{'shift_state': 144}
+185	(	s	{'shift_state': 145}
+185	NUM	s	{'shift_state': 146}
+186	ID	s	{'shift_state': 144}
+186	(	s	{'shift_state': 145}
+186	NUM	s	{'shift_state': 146}
+187	ID	s	{'shift_state': 144}
+187	(	s	{'shift_state': 145}
+187	NUM	s	{'shift_state': 146}
+188	ID	s	{'shift_state': 103}
+188	(	s	{'shift_state': 104}
+188	)	r	{'left': 'argument_list', 'right': ['$']}
+188	NUM	s	{'shift_state': 105}
+189	)	s	{'shift_state': 207}
+190	)	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+190	>	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+190	<	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+190	==	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+190	>=	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+190	<=	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+190	!=	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+190	+	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+190	-	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+190	*	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+190	/	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+191	{	s	{'shift_state': 209}
+192	ID	r	{'left': 'if_sentence', 'right': ['if', '(', 'expression', ')', 'A', 'sentence_block']}
+192	}	r	{'left': 'if_sentence', 'right': ['if', '(', 'expression', ')', 'A', 'sentence_block']}
+192	return	r	{'left': 'if_sentence', 'right': ['if', '(', 'expression', ')', 'A', 'sentence_block']}
+192	while	r	{'left': 'if_sentence', 'right': ['if', '(', 'expression', ')', 'A', 'sentence_block']}
+192	if	r	{'left': 'if_sentence', 'right': ['if', '(', 'expression', ')', 'A', 'sentence_block']}
+192	else	r	{'left': 'N', 'right': ['$']}
+193	int	s	{'shift_state': 32}
+193	ID	r	{'left': 'inner_declare', 'right': ['$']}
+193	return	r	{'left': 'inner_declare', 'right': ['$']}
+193	while	r	{'left': 'inner_declare', 'right': ['$']}
+193	if	r	{'left': 'inner_declare', 'right': ['$']}
+194	;	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+194	+	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+194	-	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+194	*	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+194	/	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+195	ID	s	{'shift_state': 170}
+195	(	s	{'shift_state': 171}
+195	NUM	s	{'shift_state': 172}
+196	ID	s	{'shift_state': 170}
+196	(	s	{'shift_state': 171}
+196	NUM	s	{'shift_state': 172}
+197	ID	s	{'shift_state': 170}
+197	(	s	{'shift_state': 171}
+197	NUM	s	{'shift_state': 172}
+198	ID	s	{'shift_state': 170}
+198	(	s	{'shift_state': 171}
+198	NUM	s	{'shift_state': 172}
+199	ID	s	{'shift_state': 103}
+199	(	s	{'shift_state': 104}
+199	)	r	{'left': 'argument_list', 'right': ['$']}
+199	NUM	s	{'shift_state': 105}
+200	)	s	{'shift_state': 217}
+201	)	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+201	,	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+201	>	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+201	<	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+201	==	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+201	>=	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+201	<=	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+201	!=	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+201	+	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+201	-	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+201	*	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+201	/	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+202	)	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+203	)	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+204	)	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+204	+	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+204	-	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+205	)	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+205	+	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+205	-	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+206	)	s	{'shift_state': 218}
+207	)	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+207	+	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+207	-	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+207	*	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+207	/	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+208	ID	r	{'left': 'while_sentence', 'right': ['while', 'M', '(', 'expression', ')', 'A', 'sentence_block']}
+208	}	r	{'left': 'while_sentence', 'right': ['while', 'M', '(', 'expression', ')', 'A', 'sentence_block']}
+208	return	r	{'left': 'while_sentence', 'right': ['while', 'M', '(', 'expression', ')', 'A', 'sentence_block']}
+208	while	r	{'left': 'while_sentence', 'right': ['while', 'M', '(', 'expression', ')', 'A', 'sentence_block']}
+208	if	r	{'left': 'while_sentence', 'right': ['while', 'M', '(', 'expression', ')', 'A', 'sentence_block']}
+209	int	s	{'shift_state': 32}
+209	ID	r	{'left': 'inner_declare', 'right': ['$']}
+209	return	r	{'left': 'inner_declare', 'right': ['$']}
+209	while	r	{'left': 'inner_declare', 'right': ['$']}
+209	if	r	{'left': 'inner_declare', 'right': ['$']}
+210	else	s	{'shift_state': 220}
+211	ID	s	{'shift_state': 39}
+211	return	s	{'shift_state': 40}
+211	while	s	{'shift_state': 41}
+211	if	s	{'shift_state': 42}
+212	)	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+212	,	r	{'left': 'add_expression', 'right': ['item', '+', 'add_expression']}
+213	)	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+213	,	r	{'left': 'add_expression', 'right': ['item', '-', 'add_expression']}
+214	)	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+214	,	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+214	+	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+214	-	r	{'left': 'item', 'right': ['factor', '*', 'item']}
+215	)	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+215	,	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+215	+	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+215	-	r	{'left': 'item', 'right': ['factor', '/', 'item']}
+216	)	s	{'shift_state': 222}
+217	)	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+217	,	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+217	+	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+217	-	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+217	*	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+217	/	r	{'left': 'factor', 'right': ['(', 'expression', ')']}
+218	)	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+218	+	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+218	-	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+218	*	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+218	/	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+219	ID	s	{'shift_state': 39}
+219	return	s	{'shift_state': 40}
+219	while	s	{'shift_state': 41}
+219	if	s	{'shift_state': 42}
+220	{	r	{'left': 'M', 'right': ['$']}
+221	}	s	{'shift_state': 225}
+222	)	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+222	,	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+222	+	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+222	-	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+222	*	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+222	/	r	{'left': 'factor', 'right': ['ID', '(', 'argument_list', ')']}
+223	}	s	{'shift_state': 226}
+224	{	r	{'left': 'A', 'right': ['$']}
+225	ID	r	{'left': 'sentence_block', 'right': ['{', 'inner_declare', 'sentence_list', '}']}
+225	}	r	{'left': 'sentence_block', 'right': ['{', 'inner_declare', 'sentence_list', '}']}
+225	return	r	{'left': 'sentence_block', 'right': ['{', 'inner_declare', 'sentence_list', '}']}
+225	while	r	{'left': 'sentence_block', 'right': ['{', 'inner_declare', 'sentence_list', '}']}
+225	if	r	{'left': 'sentence_block', 'right': ['{', 'inner_declare', 'sentence_list', '}']}
+225	else	r	{'left': 'sentence_block', 'right': ['{', 'inner_declare', 'sentence_list', '}']}
+226	ID	r	{'left': 'sentence_block', 'right': ['{', 'inner_declare', 'sentence_list', '}']}
+226	}	r	{'left': 'sentence_block', 'right': ['{', 'inner_declare', 'sentence_list', '}']}
+226	return	r	{'left': 'sentence_block', 'right': ['{', 'inner_declare', 'sentence_list', '}']}
+226	while	r	{'left': 'sentence_block', 'right': ['{', 'inner_declare', 'sentence_list', '}']}
+226	if	r	{'left': 'sentence_block', 'right': ['{', 'inner_declare', 'sentence_list', '}']}
+227	{	s	{'shift_state': 209}
+228	ID	r	{'left': 'if_sentence', 'right': ['if', '(', 'expression', ')', 'A', 'sentence_block', 'N', 'else', 'M', 'A', 'sentence_block']}
+228	}	r	{'left': 'if_sentence', 'right': ['if', '(', 'expression', ')', 'A', 'sentence_block', 'N', 'else', 'M', 'A', 'sentence_block']}
+228	return	r	{'left': 'if_sentence', 'right': ['if', '(', 'expression', ')', 'A', 'sentence_block', 'N', 'else', 'M', 'A', 'sentence_block']}
+228	while	r	{'left': 'if_sentence', 'right': ['if', '(', 'expression', ')', 'A', 'sentence_block', 'N', 'else', 'M', 'A', 'sentence_block']}
+228	if	r	{'left': 'if_sentence', 'right': ['if', '(', 'expression', ')', 'A', 'sentence_block', 'N', 'else', 'M', 'A', 'sentence_block']}

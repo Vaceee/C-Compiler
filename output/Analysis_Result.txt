@@ -1,0 +1,224 @@
+Read symbol	int
+		reduce using the production	N->['$']
+		push state	2
+		State stack:	[0, 2]
+		Symbol stack:	['#']
+Read symbol	int
+		shift	int	and push state	5
+		State stack:	[0, 2, 5]
+		Symbol stack:	['#', 'int']
+Read symbol	ID
+		shift	ID	and push state	8
+		State stack:	[0, 2, 5, 8]
+		Symbol stack:	['#', 'int', 'ID']
+Read symbol	(
+		reduce using the production	M->['$']
+		push state	11
+		State stack:	[0, 2, 5, 8, 11]
+		Symbol stack:	['#', 'int', 'ID']
+Read symbol	(
+		reduce using the production	A->['$']
+		push state	14
+		State stack:	[0, 2, 5, 8, 11, 14]
+		Symbol stack:	['#', 'int', 'ID']
+Read symbol	(
+		shift	(	and push state	17
+		State stack:	[0, 2, 5, 8, 11, 14, 17]
+		Symbol stack:	['#', 'int', 'ID', '(']
+Read symbol	)
+		reduce using the production	parameter->['$']
+		push state	19
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19]
+		Symbol stack:	['#', 'int', 'ID', '(']
+Read symbol	)
+		shift	)	and push state	24
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24]
+		Symbol stack:	['#', 'int', 'ID', '(', ')']
+Read symbol	{
+		shift	{	and push state	28
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', '{']
+Read symbol	int
+		shift	int	and push state	32
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 32]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', '{', 'int']
+Read symbol	ID
+		shift	ID	and push state	44
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 32, 44]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', '{', 'int', 'ID']
+Read symbol	;
+		reduce using the production	inner_var_declare->['int', 'ID']
+		push state	31
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 31]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', '{', 'inner_var_declare']
+Read symbol	;
+		shift	;	and push state	43
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 31, 43]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', '{', 'inner_var_declare', ';']
+Read symbol	int
+		shift	int	and push state	32
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 31, 43, 32]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', '{', 'inner_var_declare', ';', 'int']
+Read symbol	ID
+		shift	ID	and push state	44
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 31, 43, 32, 44]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', '{', 'inner_var_declare', ';', 'int', 'ID']
+Read symbol	;
+		reduce using the production	inner_var_declare->['int', 'ID']
+		push state	31
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 31, 43, 31]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', '{', 'inner_var_declare', ';', 'inner_var_declare']
+Read symbol	;
+		shift	;	and push state	43
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 31, 43, 31, 43]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', '{', 'inner_var_declare', ';', 'inner_var_declare', ';']
+Read symbol	ID
+		reduce using the production	inner_declare->['$']
+		push state	58
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 31, 43, 31, 43, 58]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', '{', 'inner_var_declare', ';', 'inner_var_declare', ';']
+Read symbol	ID
+		reduce using the production	inner_declare->['inner_var_declare', ';', 'inner_declare']
+		push state	58
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 31, 43, 58]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', '{', 'inner_var_declare', 'inner_declare']
+Read symbol	ID
+		reduce using the production	inner_declare->['inner_var_declare', ';', 'inner_declare']
+		push state	30
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare']
+Read symbol	ID
+		shift	ID	and push state	39
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 39]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'ID']
+Read symbol	=
+		shift	=	and push state	47
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 39, 47]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'ID', '=']
+Read symbol	ID
+		shift	ID	and push state	52
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 39, 47, 52]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'ID', '=', 'ID']
+Read symbol	;
+		reduce using the production	factor->['ID']
+		push state	51
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 39, 47, 51]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'ID', '=', 'factor']
+Read symbol	;
+		reduce using the production	item->['factor']
+		push state	50
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 39, 47, 50]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'ID', '=', 'item']
+Read symbol	;
+		reduce using the production	add_expression->['item']
+		push state	49
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 39, 47, 49]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'ID', '=', 'add_expression']
+Read symbol	;
+		reduce using the production	expression->['add_expression']
+		push state	60
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 39, 47, 60]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'ID', '=', 'expression']
+Read symbol	;
+		shift	;	and push state	82
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 39, 47, 60, 82]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'ID', '=', 'expression', ';']
+Read symbol	return
+		reduce using the production	assign_sentence->['ID', '=', 'expression', ';']
+		push state	35
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 35]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'assign_sentence']
+Read symbol	return
+		reduce using the production	sentence->['assign_sentence']
+		push state	34
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 34]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'sentence']
+Read symbol	return
+		reduce using the production	M->['$']
+		push state	46
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 34, 46]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'sentence']
+Read symbol	return
+		shift	return	and push state	40
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 34, 46, 40]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'sentence', 'return']
+Read symbol	ID
+		shift	ID	and push state	52
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 34, 46, 40, 52]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'sentence', 'return', 'ID']
+Read symbol	;
+		reduce using the production	factor->['ID']
+		push state	51
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 34, 46, 40, 51]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'sentence', 'return', 'factor']
+Read symbol	;
+		reduce using the production	item->['factor']
+		push state	50
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 34, 46, 40, 50]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'sentence', 'return', 'item']
+Read symbol	;
+		reduce using the production	add_expression->['item']
+		push state	49
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 34, 46, 40, 49]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'sentence', 'return', 'add_expression']
+Read symbol	;
+		reduce using the production	expression->['add_expression']
+		push state	48
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 34, 46, 40, 48]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'sentence', 'return', 'expression']
+Read symbol	;
+		shift	;	and push state	61
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 34, 46, 40, 48, 61]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'sentence', 'return', 'expression', ';']
+Read symbol	}
+		reduce using the production	return_sentence->['return', 'expression', ';']
+		push state	36
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 34, 46, 36]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'sentence', 'return_sentence']
+Read symbol	}
+		reduce using the production	sentence->['return_sentence']
+		push state	34
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 34, 46, 34]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'sentence', 'sentence']
+Read symbol	}
+		reduce using the production	sentence_list->['sentence']
+		push state	59
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 34, 46, 59]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'inner_declare', 'sentence', 'sentence_list']
+Read symbol	}
+		reduce using the production	sentence_list->['sentence', 'M', 'sentence_list']
+		push state	33
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 33]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'sentence_list']
+Read symbol	}
+		shift	}	and push state	45
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 28, 30, 33, 45]
+		Symbol stack:	['#', 'int', 'ID', '(', ')', 'sentence_list', '}']
+Read symbol	#
+		reduce using the production	sentence_block->['{', 'inner_declare', 'sentence_list', '}']
+		push state	27
+		State stack:	[0, 2, 5, 8, 11, 14, 17, 19, 24, 27]
+		Symbol stack:	['#', 'int', 'ID', 'sentence_block']
+Read symbol	#
+		reduce using the production	function_declare->['(', 'parameter', ')', 'sentence_block']
+		push state	16
+		State stack:	[0, 2, 5, 8, 11, 14, 16]
+		Symbol stack:	['function_declare']
+Read symbol	#
+		reduce using the production	declare->['int', 'ID', 'M', 'A', 'function_declare']
+		push state	4
+		State stack:	[0, 2, 4]
+		Symbol stack:	['declare']
+Read symbol	#
+		reduce using the production	declare_list->['declare']
+		push state	3
+		State stack:	[0, 2, 3]
+		Symbol stack:	['declare_list']
+Read symbol	#
+		reduce using the production	P->['N', 'declare_list']
+		push state	1
+		State stack:	[0, 1]
+		Symbol stack:	['P']
+Read symbol	#
+Accept!
+Finished in	42	steps
